@@ -72,6 +72,7 @@ class Bilibili_lucky_main(tbl_class):
         for i, url in enumerate(res3_8):  # 全部放入一个列表里面
             res.append(res3_8[i])
 
+        # 全部放一个list统一处理
         res = lp_class.link_processing(res=res)
 
         for i, url in enumerate(res):
@@ -84,6 +85,7 @@ class Bilibili_lucky_main(tbl_class):
                 time.sleep(1.5)
 
                 # success = gu_class.go_url(res[i])
+                # 判断分类，走不同的处理逻辑
                 if len(tbl_class.web.find_elements("css selector","span[class='opus-text-rich-hl lottery']")) > 0 :
                     pytest.main(["-s","-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_GF"])
                 elif len(tbl_class.web.find_elements("css selector","span[class='bili-dyn-card-reserve__lottery__text']")) > 0:
@@ -118,6 +120,7 @@ class Bilibili_lucky_main(tbl_class):
         # for i, url in enumerate(res4_3):  # 加入其他博主第三种页面抽奖链接
         #     res4.append(res4_3[i])
 
+        # 放一个list统一处理
         res = lp_class.link_processing(res2=res4)
 
         for i, url in enumerate(res):
