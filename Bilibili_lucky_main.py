@@ -9,6 +9,7 @@
 # 通过pycharm运行，工作目录就是项目位置，pycharm自己封装的一系列操作，拿得到其他包；
 # 通过终端执行，工作目录在执行文件位置，系统拿不到同项目下其他包，就会报错
 import sys
+
 import time
 import pytest
 from method import conftest
