@@ -76,7 +76,7 @@ class Bilibili_lucky_Parent_Class:
     # web.maximize_window()
 
     # 读取本地json文件，拿到已经跑过的链接
-    with open(Bilibili_lucky_Parent_Class.data_local, "r", encoding="utf-8") as da:
+    with open(data_local, "r", encoding="utf-8") as da:
         js = json.load(da)
     # 新建浏览器窗口
     # web.execute_script(f"window.open()")
