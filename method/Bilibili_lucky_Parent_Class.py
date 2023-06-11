@@ -40,6 +40,8 @@ class Bilibili_lucky_Parent_Class:
         user_option.add_argument(f"--user-data-dir={user_data}")
         # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
         user_option.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+        # 设置浏览器窗口大小
+        user_option.add_argument('window-size=1920,1080')
         # windows系统json文件位置
         data_local = r"D:\AABCDEFG\PycharmProjects\bilibili_luck\data\luck_url.json"
 
@@ -51,13 +53,13 @@ class Bilibili_lucky_Parent_Class:
         user_option.add_argument(f"--user-data-dir={user_data}")
         # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
         user_option.binary_location = r"/Applications/Google_Chrome_bilibili.app/Contents/MacOS/Google Chrome"
+        # 设置浏览器窗口大小
+        user_option.add_argument('window-size=3840,2160')
         # mac系统json文件位置
         data_local = r"/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json"
 
     # 设置浏览器无界面运行，会加大被防爬发现的概率，不使用
     # user_option.add_argument('headless')
-    # 设置浏览器窗口大小
-    user_option.add_argument('window-size=3840,2160')
     # 设置窗口启动位置，左上角
     user_option.add_argument('window-position=0,0')
     # 取消浏览器被自动化程序控制的提示
