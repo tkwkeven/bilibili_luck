@@ -44,6 +44,7 @@ class Bilibili_lucky_Parent_Class:
         # user_option.add_argument('window-size=1920,1080')
         # windows系统json文件位置
         # data_local = r"D:\AABCDEFG\PycharmProjects\bilibili_luck\data\luck_url.json"
+        data_local = r"..\data\luck_url.json"
 
     elif sys.platform.startswith('darwin'):
         print('当前操作系统是Mac OS')
@@ -57,7 +58,7 @@ class Bilibili_lucky_Parent_Class:
         user_option.add_argument('window-size=3840,2160')
         # mac系统json文件位置
         # data_local = r"/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json"
-
+        data_local = r"../data/luck_url.json"
 
 
     # 设置浏览器无界面运行，会加大被防爬发现的概率，不使用
@@ -78,8 +79,6 @@ class Bilibili_lucky_Parent_Class:
     web = webdriver.Chrome(options=user_option)
     # web = webdriver.Safari()
     web.maximize_window()
-
-    data_local = r"../data/luck_url.json"
 
     # 读取本地json文件，拿到已经跑过的链接
     with open(data_local, "r", encoding="utf-8") as da:
