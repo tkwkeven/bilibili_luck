@@ -28,14 +28,32 @@ import data
 
 class Bilibili_lucky_Parent_Class:
 
+
     # 给一个选项类
     user_option = webdriver.ChromeOptions()
-    # 谷歌浏览器个人数据路径
-    user_data = r'/Users/bytedance/Documents/config_chrome'
-    # 添加浏览器用户数据，指定用户数据存储路径
-    user_option.add_argument(f"--user-data-dir={user_data}")
-    # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
-    user_option.binary_location = r"/Applications/Google_Chrome_bilibili.app/Contents/MacOS/Google Chrome"
+
+    if sys.platform.startswith('win'):
+        print("这是微软系统")
+        # 谷歌浏览器个人数据路径
+        user_data = r"C:\Users\hy\AppData\Local\Google\Chrome\User_bilibili"
+        # 添加浏览器用户数据，指定用户数据存储路径
+        user_option.add_argument(f"--user-data-dir={user_data}")
+        # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
+        user_option.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+        # windows系统json文件位置
+        data_local = r"D:\AABCDEFG\PycharmProjects\bilibili_luck\data\luck_url.json"
+
+    elif sys.platform.startswith('darwin'):
+        print('当前操作系统是Mac OS')
+        # 谷歌浏览器个人数据路径
+        user_data = r'/Users/bytedance/Documents/config_chrome'
+        # 添加浏览器用户数据，指定用户数据存储路径
+        user_option.add_argument(f"--user-data-dir={user_data}")
+        # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
+        user_option.binary_location = r"/Applications/Google_Chrome_bilibili.app/Contents/MacOS/Google Chrome"
+        # mac系统json文件位置
+        data_local = r"/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json"
+
     # 设置浏览器无界面运行，会加大被防爬发现的概率，不使用
     # user_option.add_argument('headless')
     # 设置浏览器窗口大小
@@ -58,7 +76,7 @@ class Bilibili_lucky_Parent_Class:
     # web.maximize_window()
 
     # 读取本地json文件，拿到已经跑过的链接
-    with open("/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json", "r", encoding="utf-8") as da:
+    with open(Bilibili_lucky_Parent_Class.data_local, "r", encoding="utf-8") as da:
         js = json.load(da)
     # 新建浏览器窗口
     # web.execute_script(f"window.open()")

@@ -95,7 +95,7 @@ class Bilibili_lucky_main(tbl_class):
 
                 dic_u = {res[i]: 1}
                 tbl_class.js.update(dic_u)
-                with open("/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json", "w", encoding="utf-8") as da:
+                with open(tbl_class.data_local, "w", encoding="utf-8") as da:
                     json.dump(tbl_class.js, da, ensure_ascii=False, indent=2)
 
 

@@ -126,7 +126,7 @@ class Test_Go_url(tbl):
 
         Test_Go_url.action.click(
             tbl.web.find_element("css selector", "textarea[class='reply-box-textarea focus']")).perform()
-        with open("/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json", "r", encoding="utf-8") as da:
+        with open(tbl.data_local, "r", encoding="utf-8") as da:
             com = json.load(da)
 
         # 判断是否需要带话题评论，输入评论
@@ -241,7 +241,7 @@ class Test_Go_url(tbl):
 
         # 这里输入文字
         # Go_url.action.click(tbl.web.find_element("css selector", "textarea[class='ipt-txt']")).perform()
-        with open("/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json", "r", encoding="utf-8") as da:
+        with open(tbl.data_local, "r", encoding="utf-8") as da:
             com = json.load(da)
 
         # 判断是否需要带话题评论
@@ -326,7 +326,7 @@ class Test_Go_url(tbl):
         time.sleep(1)
         Test_Go_url.action.move_to_element(
             tbl.web.find_element("css selector", "textarea[class='Form_input_3JT2Q']")).perform()
-        with open("/Users/bytedance/PycharmProjects/bilibili_luck/data/luck_url.json", "r", encoding="utf-8") as da:
+        with open(tbl.data_local, "r", encoding="utf-8") as da:
             com = json.load(da)
 
         # 判断是否需要带话题评论
