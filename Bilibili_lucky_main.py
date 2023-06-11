@@ -88,13 +88,13 @@ class Bilibili_lucky_main(tbl_class):
                 # success = gu_class.go_url(res[i])
                 # 判断分类，走不同的处理逻辑
                 if len(tbl_class.web.find_elements("css selector","span[class='opus-text-rich-hl lottery']")) > 0 :
-                    pytest.main(["-s","-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_GF"])
+                    pytest.main(["-s","-v","method/test_Go_url.py::Test_Go_url::test_go_url_GF"])
                 elif len(tbl_class.web.find_elements("css selector","span[class='bili-dyn-card-reserve__lottery__text']")) > 0:
-                    pytest.main(["-s","-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_YY"])
+                    pytest.main(["-s","-v","method/test_Go_url.py::Test_Go_url::test_go_url_YY"])
                 elif len(tbl_class.web.find_elements("css selector", "div[class='side-toolbar__action forward']")) > 0:
-                    pytest.main(["-s", "-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_FGF_new"])
+                    pytest.main(["-s", "-v","method/test_Go_url.py::Test_Go_url::test_go_url_FGF_new"])
                 else:
-                    pytest.main(["-s", "-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_FGF_old"])
+                    pytest.main(["-s", "-v","method/test_Go_url.py::Test_Go_url::test_go_url_FGF_old"])
 
                 dic_u = {res[i]: 1}
                 tbl_class.js.update(dic_u)
@@ -132,7 +132,7 @@ class Bilibili_lucky_main(tbl_class):
                 success = 0
                 tbl_class.web.get(res[i])
 
-                pytest.main(["-s", "-v","/Users/bytedance/PycharmProjects/bilibili_luck/method/test_Go_url.py::Test_Go_url::test_go_url_WB"])
+                pytest.main(["-s", "-v","method/test_Go_url.py::Test_Go_url::test_go_url_WB"])
                 # success = gu_class.go_weibo_url(res[i])
 
                 dic_u = {res[i]: success}
