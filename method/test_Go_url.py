@@ -273,12 +273,13 @@ class Test_Go_url(tbl):
 
     def test_go_url_WB(self):
         print("这是微博抽奖链接，run......")
+        time.sleep(1)
 
         # 判断是否关注
-        if len(tbl.web.find_elements("css selector",
-                                     "button[class='woo-button-main woo-button-line woo-button-primary woo-button-s woo-button-round follow-btn_followbtn_FNC50']")) > 0:
-            Test_Go_url.action.click(tbl.web.find_element("css selector",
-                                                     "button[class='woo-button-main woo-button-line woo-button-primary woo-button-s woo-button-round follow-btn_followbtn_FNC50']")).perform()
+        if len(tbl.web.find_elements("xpath",
+                                     "//button[@class='woo-button-main woo-button-line woo-button-primary woo-button-s woo-button-round follow-btn_followbtn_FNC50']")) > 0:
+            Test_Go_url.action.click(tbl.web.find_element("xpath",
+                                                     "//button[@class='woo-button-main woo-button-line woo-button-primary woo-button-s woo-button-round follow-btn_followbtn_FNC50']")).perform()
             time.sleep(2)
 
         # 先获取页面中出现的微博号，一个一个关注
