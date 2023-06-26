@@ -74,6 +74,8 @@ class Bilibili_lucky_Parent_Class:
     user_option.add_argument('--disable-gpu')
     # 设置加载策略，这是第2种
     # user_option.page_load_strategy = "eager"
+    # 实现规避检测，让网站检测不到（可以通过小红书检测）
+    user_option.add_argument("--disable-blink-features=AutomationControlled")
 
     # 实例化谷歌浏览器窗口
     web = webdriver.Chrome(options=user_option)
