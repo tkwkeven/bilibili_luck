@@ -37,6 +37,8 @@ class Bilibili_lucky_main(tbl_class):
         zhuanlan_url_6 = "https://space.bilibili.com/492426375/article"
         zhuanlan_url_7 = "https://space.bilibili.com/280579777/article"
         zhuanlan_url_8 = "https://space.bilibili.com/280025263/article"
+        zhuanlan_url_9 = "https://space.bilibili.com/1905702375/article"
+        zhuanlan_url_10 = "https://space.bilibili.com/1284836532/article"
 
 
         # res = gll_class.get_luck_list(jihe_url, 1)    #用专栏页面代替
@@ -50,6 +52,8 @@ class Bilibili_lucky_main(tbl_class):
         res3_6 = gll_class.get_luck_list(zhuanlan_url_6, 3)
         res3_7 = gll_class.get_luck_list(zhuanlan_url_7,3)
         res3_8 = gll_class.get_luck_list(zhuanlan_url_8,3)
+        res3_9 = gll_class.get_luck_list(zhuanlan_url_9,3)
+        res3_10 = gll_class.get_luck_list(zhuanlan_url_10,3)
 
 
         for i, url in enumerate(res2):  # 全部放入一个列表里面
@@ -72,6 +76,10 @@ class Bilibili_lucky_main(tbl_class):
             res.append(res3_7[i])
         for i, url in enumerate(res3_8):  # 全部放入一个列表里面
             res.append(res3_8[i])
+        for i, url in enumerate(res3_9):  # 全部放入一个列表里面
+            res.append(res3_9[i])
+        for i, url in enumerate(res3_10):
+            res.append(res3_10[i])
 
         # 全部放一个list统一处理
         res = lp_class.link_processing(res=res)
