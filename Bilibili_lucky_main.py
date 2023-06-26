@@ -177,7 +177,7 @@ if __name__ == '__main__':
     bilibili.bilibili_lucky_main()
     bilibili.Weibo_lucky_main()
 
-    # bilibili.Xiaohongshu_lucky_main()   #无效，被检测出爬虫机器人
+    # bilibili.Xiaohongshu_lucky_main()   #无效，被检测出爬虫机器人--->已经规避检测，可以正常登录浏览，但是网页小红书没有抽奖按钮，无法抽奖
 
     tbl_class.web.quit()
 
