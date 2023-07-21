@@ -72,7 +72,7 @@ class Get_luck_list(tbl):
                 # tbl.web.execute_script("window.scrollTo(0, 2500)")
                 time.sleep(1)
             # 获取微博中的抽奖链接，只取有抽奖链接的微博，筛选一下
-            shaixuan = tbl.web.find_elements("xpath","//div[@class='vue-recycle-scroller__item-view']//div[contains(text(),'抽奖合集')]")
+            shaixuan = tbl.web.find_elements("xpath","//div[@class='vue-recycle-scroller__item-view']//div[contains(text(),'抽奖合集')]|//div[@class='vue-recycle-scroller__item-view']//div[contains(text(),'抽奖集合')]")
             # heji = shaixuan[0].find_elements("xpath","//a[contains(@href,'weibo')][not(@title)][contains(text(),'微博正文')]|//a[contains(@href,'detail')]")
             heji = shaixuan[0].find_elements("css selector","a[href*='weibo']:not([title]),a[href*='detail']")
             for i,uq in enumerate(heji):
