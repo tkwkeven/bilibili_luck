@@ -78,7 +78,7 @@ class Bilibili_lucky_Parent_Class:
     user_option.add_argument("--disable-blink-features=AutomationControlled")
 
     # 实例化谷歌浏览器窗口
-    #可能有浏览器驱动报错，重新安装浏览器驱动就可以解决
+    #可能有浏览器驱动报错，重新安装浏览器驱动就可以解决，然后mac系统还需要给信任，设置-隐私与安全-安全性-给信任
     web = webdriver.Chrome(options=user_option)
     # web = webdriver.Safari()
     web.maximize_window()
