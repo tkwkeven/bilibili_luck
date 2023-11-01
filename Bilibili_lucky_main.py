@@ -38,7 +38,7 @@ class Bilibili_lucky_main(tbl_class):
         zhuanlan_url_7 = "https://space.bilibili.com/280579777/article"
         zhuanlan_url_8 = "https://space.bilibili.com/280025263/article"
         zhuanlan_url_9 = "https://space.bilibili.com/1905702375/article"
-        zhuanlan_url_10 = "https://space.bilibili.com/1284836532/article"
+        # zhuanlan_url_10 = "https://space.bilibili.com/1284836532/article"  #链接无效
 
 
         # res = gll_class.get_luck_list(jihe_url, 1)    #用专栏页面代替
@@ -46,14 +46,14 @@ class Bilibili_lucky_main(tbl_class):
         res3 = gll_class.get_luck_list(zhuanlan_url, 3)
         res00 = gll_class.get_luck_list(zhuanlan_url_00,3)
         res3_2 = gll_class.get_luck_list(zhuanlan_url_2, 3)
-        res3_3 = gll_class.get_luck_list(zhuanlan_url_3, 3)
+        # res3_3 = gll_class.get_luck_list(zhuanlan_url_3, 3)
         res3_4 = gll_class.get_luck_list(zhuanlan_url_4, 3)
         # res3_5 = gll_class.get_luck_list(zhuanlan_url_5, 3)   #抽奖时间到达才汇集，没用
         res3_6 = gll_class.get_luck_list(zhuanlan_url_6, 3)
         res3_7 = gll_class.get_luck_list(zhuanlan_url_7,3)
         res3_8 = gll_class.get_luck_list(zhuanlan_url_8,3)
         res3_9 = gll_class.get_luck_list(zhuanlan_url_9,3)
-        res3_10 = gll_class.get_luck_list(zhuanlan_url_10,3)
+        # res3_10 = gll_class.get_luck_list(zhuanlan_url_10,3)
 
 
         for i, url in enumerate(res2):  # 全部放入一个列表里面
@@ -64,8 +64,8 @@ class Bilibili_lucky_main(tbl_class):
             res.append(res00[i])
         for i, url in enumerate(res3_2):  # 全部放入一个列表里面
             res.append(res3_2[i])
-        for i, url in enumerate(res3_3):  # 全部放入一个列表里面
-            res.append(res3_3[i])
+        # for i, url in enumerate(res3_3):  # 全部放入一个列表里面
+        #     res.append(res3_3[i])
         for i, url in enumerate(res3_4):  # 全部放入一个列表里面
             res.append(res3_4[i])
         # for i, url in enumerate(res3_5):  # 全部放入一个列表里面#抽奖时间到达才汇集，没用
@@ -78,8 +78,8 @@ class Bilibili_lucky_main(tbl_class):
             res.append(res3_8[i])
         for i, url in enumerate(res3_9):  # 全部放入一个列表里面
             res.append(res3_9[i])
-        for i, url in enumerate(res3_10):
-            res.append(res3_10[i])
+        # for i, url in enumerate(res3_10):
+        #     res.append(res3_10[i])
 
         # 全部放一个list统一处理
         res = lp_class.link_processing(res=res)
