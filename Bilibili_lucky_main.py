@@ -31,7 +31,7 @@ class Bilibili_lucky_main(tbl_class):
         zhuanlan_url_00 = "https://space.bilibili.com/226257459/article"
         zhuanlan_url = "https://space.bilibili.com/3493086911007529/article"
         zhuanlan_url_2 = "https://space.bilibili.com/5536630/article"
-        zhuanlan_url_3 = "https://space.bilibili.com/99439379/article"
+        # zhuanlan_url_3 = "https://space.bilibili.com/99439379/article" #链接无效
         zhuanlan_url_4 = "https://space.bilibili.com/200824032/article"
         # zhuanlan_url_5 = "https://space.bilibili.com/384876770/article"   #抽奖时间到达才汇集，没用
         zhuanlan_url_6 = "https://space.bilibili.com/492426375/article"
