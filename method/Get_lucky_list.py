@@ -59,7 +59,6 @@ class Get_luck_list(tbl):
             #     time.sleep(1)
             #     url_list_sele = tbl.web.find_elements("css selector",
             #                                           "div[class='article-content'] a[href*='t.bilibili'],div[class='article-content'] a[href*='www.bilibili'],div[class='article-content'] a[href*='b23']")
-            #     print(url_list_sele)
             #     for i, ur in enumerate(url_list_sele):
             #         res.append(url_list_sele[i].get_attribute("href"))
             #
@@ -78,7 +77,6 @@ class Get_luck_list(tbl):
                 time.sleep(1)
                 url_list_sele = tbl.web.find_elements("css selector",
                                                       "div[class='article-content'] a[href*='t.bilibili'],div[class='article-content'] a[href*='www.bilibili'],div[class='article-content'] a[href*='b23']")
-                print(url_list_sele)
                 for i, ur in enumerate(url_list_sele):
                     res.append(url_list_sele[i].get_attribute("href"))
 
