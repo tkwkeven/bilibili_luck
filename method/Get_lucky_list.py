@@ -9,6 +9,7 @@ from method.Bilibili_lucky_Parent_Class import Bilibili_lucky_Parent_Class as tb
 
 
 class Get_luck_list(tbl):
+    action = ActionChains(tbl.web)
     def get_luck_list(self,luck_meesage,type):
         tbl.web.get(luck_meesage)
         res = []
@@ -46,18 +47,46 @@ class Get_luck_list(tbl):
         elif type == 3:
             time.sleep(2)
             # 拿到专栏中前两个动态
-            dianji_urls = tbl.web.find_elements("css selector", "div[class='main-content'] div:nth-child(-n+2) div[class='content'] li:nth-child(-n+2) h2 a")
-            for i,uo in enumerate(dianji_urls):
+            # dianji_urls = tbl.web.find_elements("css selector", "div[class='main-content'] div:nth-child(-n+2) div[class='content'] li:nth-child(-n+2) h2 a")
+            # print(dianji_urls[1].get_attribute("href"), "\n")  //循环开始前，专栏前两个动态链接获取正常
+
+            # 原方法2023年11月01号左右失效，报错元素已经过时，循环第2次时无法正常获取专栏中第2个动态链接
+            # for i,uo in enumerate(dianji_urls):
+            #     time.sleep(1)
+            #     url = dianji_urls[i].get_attribute("href")
+            #     # Get_luck_list.action.click(dianji_urls[i]).perform()
+            #     tbl.web.get(url)
+            #     time.sleep(1)
+            #     url_list_sele = tbl.web.find_elements("css selector",
+            #                                           "div[class='article-content'] a[href*='t.bilibili'],div[class='article-content'] a[href*='www.bilibili'],div[class='article-content'] a[href*='b23']")
+            #     print(url_list_sele)
+            #     for i, ur in enumerate(url_list_sele):
+            #         res.append(url_list_sele[i].get_attribute("href"))
+            #
+            #     # 返回上一页，不然获取不到专栏中第二个动态
+            #     tbl.web.back()
+
+            # 新方法，变更点1：每次循环重新获取对应的元素；变更点2：强制返回2次（解决某个专栏中动态页面地址多跳转1次的问题）
+            i = 0
+            while i < 2:
                 time.sleep(1)
+                dianji_urls = tbl.web.find_elements("css selector",
+                                                    "div[class='main-content'] div:nth-child(-n+2) div[class='content'] li:nth-child(-n+2) h2 a")
+
                 url = dianji_urls[i].get_attribute("href")
                 tbl.web.get(url)
                 time.sleep(1)
                 url_list_sele = tbl.web.find_elements("css selector",
                                                       "div[class='article-content'] a[href*='t.bilibili'],div[class='article-content'] a[href*='www.bilibili'],div[class='article-content'] a[href*='b23']")
+                print(url_list_sele)
                 for i, ur in enumerate(url_list_sele):
                     res.append(url_list_sele[i].get_attribute("href"))
+
                 # 返回上一页，不然获取不到专栏中第二个动态
                 tbl.web.back()
+                tbl.web.back()
+                i += 1
+
 
         # 微博抽奖页面：集合微博----------------微博
         elif type == 4:
