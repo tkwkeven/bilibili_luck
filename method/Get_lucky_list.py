@@ -69,8 +69,10 @@ class Get_luck_list(tbl):
             i = 0
             while i < 2:
                 time.sleep(1)
+                # dianji_urls = tbl.web.find_elements("css selector",
+                # 旧浏览器版本样式布局，下方为新版本浏览器样式                                    "div[class='main-content'] div:nth-child(-n+2) div[class='content'] li:nth-child(-n+2) h2 a")
                 dianji_urls = tbl.web.find_elements("css selector",
-                                                    "div[class='main-content'] div:nth-child(-n+2) div[class='content'] li:nth-child(-n+2) h2 a")
+                                                    "div[class='container'] div[class='item'] div[class='article-card'] a,div[class='container'] div[class='item'] div[class='article-card article-card__no-img'] a")
 
                 url = dianji_urls[i].get_attribute("href")
                 tbl.web.get(url)
@@ -82,7 +84,7 @@ class Get_luck_list(tbl):
 
                 # 返回上一页，不然获取不到专栏中第二个动态
                 tbl.web.back()
-                tbl.web.back()
+                # tbl.web.back()
                 i += 1
 
 
