@@ -56,15 +56,19 @@ class Test_Go_url(tbl):
         print("这是预约抽奖页面，run......")
 
         if len(tbl.web.find_elements("css selector", "button[class='uncheck']")) > 0:
-            # 排除已经删除的抽奖页面
+            #   排除已经删除的抽奖页面
             if len(tbl.web.find_elements("css selector", "a[class='rollback-btn']")) != 0:
                 return 0
-            #     排除撤销预约的页面
+            #   排除撤销预约的页面
             elif len(tbl.web.find_elements("css selector", "button[class='check disabled']")) != 0:
                 return 0
-
-            if len(tbl.web.find_elements("css selector", "button[class='check']")) != 0:
+            #   排除预约过的页面
+            elif len(tbl.web.find_elements("css selector", "button[class='check']")) != 0:
                 print("这里已经预约过，跳过！")
+                return 0
+            #   排除充电抽奖的页面
+            elif len(tbl.web.find_elements("css selector", "button[class='jump charge']")) != 0:
+                print("这里是充电抽奖页面，跳过！")
                 return 0
 
             # 预约抽奖

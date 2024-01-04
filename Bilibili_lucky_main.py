@@ -97,7 +97,7 @@ class Bilibili_lucky_main(tbl_class):
                 # 判断分类，走不同的处理逻辑
                 if len(tbl_class.web.find_elements("css selector","span[class='opus-text-rich-hl lottery']")) > 0 :
                     pytest.main(["-s","-v","method/test_Go_url.py::Test_Go_url::test_go_url_GF"])
-                elif len(tbl_class.web.find_elements("css selector","span[class='bili-dyn-card-reserve__lottery__text']")) > 0:
+                elif len(tbl_class.web.find_elements("css selector","span[class='bili-dyn-card-reserve__lottery__text'],span[class='bili-dyn-upower-lottery__lottery__text']")) > 0:
                     pytest.main(["-s","-v","method/test_Go_url.py::Test_Go_url::test_go_url_YY"])
                 elif len(tbl_class.web.find_elements("css selector", "div[class='side-toolbar__action forward']")) > 0:
                     pytest.main(["-s", "-v","method/test_Go_url.py::Test_Go_url::test_go_url_FGF_new"])
