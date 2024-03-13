@@ -35,7 +35,7 @@ class Bilibili_lucky_main(tbl_class):
         zhuanlan_url_4 = "https://space.bilibili.com/200824032/article"
         # zhuanlan_url_5 = "https://space.bilibili.com/384876770/article"   #抽奖时间到达才汇集，没用
         zhuanlan_url_6 = "https://space.bilibili.com/492426375/article"
-        zhuanlan_url_7 = "https://space.bilibili.com/280579777/article"
+        # zhuanlan_url_7 = "https://space.bilibili.com/280579777/article"    #主页已经没有抽奖链接
         zhuanlan_url_8 = "https://space.bilibili.com/280025263/article"
         zhuanlan_url_9 = "https://space.bilibili.com/1905702375/article"
         # zhuanlan_url_10 = "https://space.bilibili.com/1284836532/article"  #链接无效
@@ -50,7 +50,7 @@ class Bilibili_lucky_main(tbl_class):
         res3_4 = gll_class.get_luck_list(zhuanlan_url_4, 3)
         # res3_5 = gll_class.get_luck_list(zhuanlan_url_5, 3)   #抽奖时间到达才汇集，没用
         res3_6 = gll_class.get_luck_list(zhuanlan_url_6, 3)
-        res3_7 = gll_class.get_luck_list(zhuanlan_url_7,3)
+        # res3_7 = gll_class.get_luck_list(zhuanlan_url_7,3)    #主页已经没有抽奖链接
         res3_8 = gll_class.get_luck_list(zhuanlan_url_8,3)
         res3_9 = gll_class.get_luck_list(zhuanlan_url_9,3)
         # res3_10 = gll_class.get_luck_list(zhuanlan_url_10,3)
@@ -72,8 +72,8 @@ class Bilibili_lucky_main(tbl_class):
         #     res.append(res3_5[i])
         for i, url in enumerate(res3_6):  # 全部放入一个列表里面
             res.append(res3_6[i])
-        for i, url in enumerate(res3_7):  # 全部放入一个列表里面
-            res.append(res3_7[i])
+        # for i, url in enumerate(res3_7):  # 全部放入一个列表里面
+        #     res.append(res3_7[i])
         for i, url in enumerate(res3_8):  # 全部放入一个列表里面
             res.append(res3_8[i])
         for i, url in enumerate(res3_9):  # 全部放入一个列表里面
