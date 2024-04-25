@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- codeing = utf-8 -*-
 # @File:Bilibili_lucky_main.py
 # @Software:PyCharm
