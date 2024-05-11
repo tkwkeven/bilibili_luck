@@ -23,7 +23,7 @@ from method.Link_Processing import Link_Processing as lp
 
 
 class Bilibili_lucky_main(tbl_class):
-    def bilibili_lucky_main(self):
+    def bilibili_lucky_main(self):  #哔哩哔哩抽奖主函数
         gll_class = gll()
         lp_class = lp()
         res = []
@@ -112,7 +112,7 @@ class Bilibili_lucky_main(tbl_class):
                     json.dump(tbl_class.js, da, ensure_ascii=False, indent=2)
 
 
-    def Weibo_lucky_main(self):
+    def Weibo_lucky_main(self):  #微博抽奖
         gll_class = gll()
         lp_class = lp()
 
@@ -151,7 +151,7 @@ class Bilibili_lucky_main(tbl_class):
                           encoding="utf-8") as da:
                     json.dump(tbl_class.js, da, ensure_ascii=False, indent=2)
 
-    def Xiaohongshu_lucky_main(self):   # 无效，浏览器实例web被检测出是爬虫机器人
+    def Xiaohongshu_lucky_main(self):   # 小红书抽奖无效，浏览器实例web被检测出是爬虫机器人
         gll_class = gll()
         lp_class = lp()
 
@@ -181,8 +181,6 @@ class Bilibili_lucky_main(tbl_class):
 
 if __name__ == '__main__':
     bilibili = Bilibili_lucky_main()
-
-
 
     bilibili.bilibili_lucky_main()
     bilibili.Weibo_lucky_main()
