@@ -21,6 +21,7 @@ from method.Get_lucky_list import Get_luck_list as gll
 from method.Link_Processing import Link_Processing as lp
 
 
+
 class Bilibili_lucky_main(tbl_class):
     def bilibili_lucky_main(self):
         gll_class = gll()
