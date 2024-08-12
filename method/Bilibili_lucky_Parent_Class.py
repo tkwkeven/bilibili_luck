@@ -62,7 +62,7 @@ class Bilibili_lucky_Parent_Class:
 
 
     # 设置浏览器无界面运行，会加大被防爬发现的概率，不使用
-    # user_option.add_argument('headless')
+    # user_option.add_argument('headless').
     # 设置窗口启动位置，左上角
     user_option.add_argument('window-position=0,0')
     # 取消浏览器被自动化程序控制的提示
