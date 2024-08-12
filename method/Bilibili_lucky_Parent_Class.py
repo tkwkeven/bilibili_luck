@@ -35,11 +35,11 @@ class Bilibili_lucky_Parent_Class:
     if sys.platform.startswith('win'):
         print("这是微软系统")
         # 谷歌浏览器个人数据路径
-        user_data = r"C:\Users\hy\AppData\Local\Google\Chrome\User_bilibili"
+        user_data = r"C:\Users\keven\AppData\Local\Google\Chrome\User Data_bilibili_luck"
         # 添加浏览器用户数据，指定用户数据存储路径
         user_option.add_argument(f"--user-data-dir={user_data}")
         # location放自己chrome.exe的可执行文件地址，指定使用哪个谷歌浏览器
-        user_option.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+        user_option.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
         # 设置浏览器窗口大小
         # user_option.add_argument('window-size=1920,1080')
         # windows系统json文件位置
