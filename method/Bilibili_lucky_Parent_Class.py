@@ -29,7 +29,7 @@ import data
 class Bilibili_lucky_Parent_Class:
 
 
-    # 给一个选项类
+    # 给一个选项类.
     user_option = webdriver.ChromeOptions()
 
     if sys.platform.startswith('win'):
