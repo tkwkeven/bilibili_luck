@@ -1,3 +1,4 @@
+#！C:\Users\keven\AppData\Local\Programs\Python\Python312\python.exe
 #!/usr/bin/env python3
 # -*- codeing = utf-8 -*-
 # @File:Bilibili_lucky_main.py
@@ -9,7 +10,11 @@
 # 工作目录不一样：
 # 通过pycharm运行，工作目录就是项目位置，pycharm自己封装的一系列操作，拿得到其他包；
 # 通过终端执行，工作目录在执行文件位置，系统拿不到同项目下其他包，就会报错
+
+#windos里终端执行py文件后没有反应，可能是终端执行策略太严格，用命令“Get-ExecutionPolicy”，查看执行策略等级，用命令"Set-ExecutionPolicy" 来修改策略等级，输入较为宽松的“RemoteSigned”
+
 import sys
+
 
 import time
 import pytest

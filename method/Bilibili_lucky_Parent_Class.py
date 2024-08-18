@@ -14,7 +14,6 @@ import time
 import urllib
 from random import randint
 import requests
-from PIL import Image
 from lxml import etree
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
